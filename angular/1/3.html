@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="../org/angular.js"></script>
+ </head>
+ <body>
+	<div ng-app="hd" ng-controller="ctrl">
+	{{name}}<br/>
+	<form action="1.php" method="post">
+		<input type="text" ng-model="name"/><br/>
+		<input type="submit" value="提交"/>
+	</form>
+	</div>
+	<script>
+		var m=angular.module('hd',[]);
+		m.controller("ctrl",['$scope',function($scope){
+			$scope.name="喻冬";
+		}]);
+	</script>
+ </body>
+</html>

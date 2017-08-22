@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="../org/angular.js"></script>
+ </head>
+ <body>
+	<div ng-app="hd" ng-controller="ctrl">
+		<select ng-options="v.value as v.name for v in date" ng-model="pp">
+		 
+		</select>
+	{{pp}}
+	</div>
+	<script>
+		var m=angular.module('hd',[]);
+		m.controller("ctrl",['$scope',function($scope){
+			$scope.pp="12e35";
+			$scope.date=[
+			{name:"yudong1",value:"12e33"},
+			{name:"yudong2",value:"12e34"},
+			{name:"yudong3",value:"12e35"},
+			{name:"yudong4",value:"12e36"},
+			]
+		}]);
+	</script>
+ </body>
+</html>

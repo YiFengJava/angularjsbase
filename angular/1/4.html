@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="../org/angular.js"></script>
+ </head>
+ <body>
+	<div ng-app="hd" ng-controller="ctrl">
+		网站开启：<input type="radio" ng-model="status" ng-value="1"/><br/>
+		网站关闭：<input type="radio" ng-model="status" ng-value="2"/><br/>
+		{{status}}
+		<div ng-show="status==2">
+			<textarea>{{content}}
+			</textarea>
+		</div>
+	</div>
+	<script>
+		var m=angular.module('hd',[]);
+		m.controller("ctrl",['$scope',function($scope){
+			$scope.status=1;
+			$scope.content="网站关闭的原因";
+		}]);
+	</script>
+ </body>
+</html>

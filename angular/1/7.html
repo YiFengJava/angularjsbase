@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="../org/angular.js"></script>
+ </head>
+ <body>
+	<div ng-app="hd" ng-controller="ctrl">
+		
+	</div>
+	<script>
+		var m=angular.module('hd',[]);
+		m.controller("ctrl",['$scope',function($scope){
+			$scope.f='';
+			//console.log(angular.version)
+			//console.log(angular.lowercase("ASDASD"))
+			//console.log(angular.uppercase("dfsfsfs"))
+			var obj={name:"kdsj"}
+			//var objs={};
+			//angular.copy(obj,objs);
+			//console.log(obj==objs);
+			angular.extend(obj,{url:"www.baidu.com","web":"百度"})
+			console.log(obj)
+		}]);
+	</script>
+ </body>
+</html>

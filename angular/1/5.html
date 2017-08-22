@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="../org/angular.js"></script>
+ </head>
+ <body>
+	<div ng-app="hd" ng-controller="ctrl">
+		游戏：<input type="checkbox" ng-model="date.game" ng-true-value='1' ng-false-value='0'/>
+		电影：<input type="checkbox" ng-model="date.video" ng-true-value='1' ng-false-value='0'/> 
+		<br/>
+		{{date}}<br/>{{gamecentent}}<br/>{{videocentent}}
+		<br/>
+		<div ng-show="date.game==1">
+			<h1>游戏</h1>
+			<textarea ng-model="gamecentent"></textarea>
+		</div>
+		<div ng-show="date.video==1">
+			<h1>电影</h1>
+			<textarea ng-model="videocentent"></textarea>
+		</div>
+	</div>
+	<script>
+		var m=angular.module('hd',[]);
+		m.controller("ctrl",['$scope',function($scope){
+			$scope.date={"game":0,"video":0};
+			$scope.gamecentent="";
+			$scope.videocentent="";
+		}]);
+	</script>
+ </body>
+</html>

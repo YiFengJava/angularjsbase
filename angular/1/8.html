@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="../org/angular.js"></script>
+ </head>
+ <body>
+	<div ng-app="hd" ng-controller="ctrl">
+		
+	</div>
+	<script>
+		var m=angular.module('hd',[]);
+		m.controller("ctrl",['$scope',function($scope){
+			$scope.date=[{"name":"a","id":1},
+						 {"name":"b","id":2},
+						 {"name":"c","id":3},
+						 {"name":"d","id":4},
+						 {"name":"e","id":5}]
+
+			angular.forEach($scope.date,function(v,k){
+				console.log(v);
+				console.log(k);
+			})
+		}]);
+	</script>
+ </body>
+</html>

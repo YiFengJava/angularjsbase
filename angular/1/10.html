@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="../org/angular.js"></script>
+ </head>
+ <body>
+	<div ng-app="hd" ng-controller="ctrl">
+		{{data}}
+	</div>
+	<script>
+		var m=angular.module('hd',[]);
+		m.controller("ctrl",['$scope',function($scope){	
+		//$scope.data=localStorage.getItem("data");
+		//alert($scope.data);
+		$scope.data=angular.fromJson(localStorage.getItem("data"))
+		alert($scope.data);
+		//$scope.data={"name":"喻冬"};
+		
+		//localStorage.setItem("data",angular.toJson($scope.data));//angular.toJson($scope.data)
+		}]);
+	</script>
+ </body>
+</html>

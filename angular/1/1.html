@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="../org/angular.js"></script>
+ </head>
+ <body>
+	<div ng-app="hd" ng-controller="ctrl">
+	{{name}}
+	<h2 ng-bind="name"></h2>
+	<input ng-model="name"/>
+	</div>
+	<script>
+		var m=angular.module("hd",[]);
+		m.controller("ctrl",["$scope",function ($scope){
+			
+			$scope.name="kdfkslj开的房间看ddddddd";
+		}])
+	</script>
+ </body>
+</html>
