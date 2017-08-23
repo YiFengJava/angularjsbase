@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="../org/angular.js"></script>
+ </head>
+ <body>
+	<div ng-app="hd" ng-controller="ctrl">
+        <input type ="checkbox" ng-model="status">接受协议</input>     
+        <button ng-init="pd='true'" ng-click="pd=!pd">查看协议<button>
+          <br/>
+       <textarea ng-show="!pd">kasjfjdasklfjksdjfakadsjkk这是协议内容</textarea>
+            <!--<div>-->
+                <!--kasjfjdasklfjksdjfakadsjkk这是协议内容-->
+            
+            <!--</div>-->
+
+            <button ng-disabled="!status">登陆</button>
+	</div>
+	<script>
+		var m=angular.module('hd',[]);
+		m.controller("ctrl",['$scope',function($scope){	
+         
+		}]);
+	</script>
+ </body>
+</html>
